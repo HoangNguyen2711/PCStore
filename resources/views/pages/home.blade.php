@@ -8,15 +8,15 @@
         <div class="product-image-wrapper">
             <div class="single-products">
                 <div class="productinfo text-center">
-                    <img src="{{('public/frontend/images/product1.jpg')}}" alt="" />
-                    <h2>$56</h2>
-                    <p>Easy Polo Black Edition</p>
+                    <img src="{{('public/frontend/images/laptop1.jpg')}}" alt="" />
+                    <h2>22.990.000 VND</h2>
+                    <p>Surface Laptop 3</p>
                     <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                 </div>
                 <div class="product-overlay">
                     <div class="overlay-content">
-                        <h2>$56</h2>
-                        <p>Easy Polo Black Edition</p>
+                        <h2>22.990.000 VND</h2>
+                        <p>Surface Laptop 3</p>
                         <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                     </div>
                 </div>
