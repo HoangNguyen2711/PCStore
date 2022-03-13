@@ -163,7 +163,7 @@
                                     <button type="button" class="btn btn-default get">Get it now</button>
                                 </div>
                                 <div class="col-sm-6">
-                                    <img src="{{('public/frontend/images/girl1.jpg')}}" class="girl img-responsive" alt="" />
+                                    <img src="{{('public/frontend/images/girl1.png')}}" class="girl img-responsive" alt="" />
                                     <img src="{{('public/frontend/images/pricing.png')}}"  class="pricing" alt="" />
                                 </div>
                             </div>
@@ -175,7 +175,7 @@
                                     <button type="button" class="btn btn-default get">Get it now</button>
                                 </div>
                                 <div class="col-sm-6">
-                                    <img src="{{('public/frontend/images/girl2.jpg')}}" class="girl img-responsive" alt="" />
+                                    <img src="{{('public/frontend/images/girl2.png')}}" class="girl img-responsive" alt="" />
                                     <img src="{{('public/frontend/images/pricing.png')}}"  class="pricing" alt="" />
                                 </div>
                             </div>
