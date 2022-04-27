@@ -272,7 +272,7 @@
                                         </a>
                                     </h4>
                                 </div>
-                               <!--  <div id="womens" class="panel-collapse collapse">
+                                <div id="womens" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <ul>
                                             <li><a href="#">Fendi</a></li>
@@ -318,7 +318,7 @@
                                 <div class="panel-heading">
                                     <h4 class="panel-title"><a href="#">Shoes</a></h4>
                                 </div>
-                            </div> -->
+                            </div>
                         </div><!--/category-products-->
                     
                         <div class="brands_products"><!--brands_products-->

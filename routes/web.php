@@ -33,4 +33,5 @@ use App\Http\Controllers\CategoryController;
 
 Route::get('/add-category-product', [CategoryController::class, 'add_category_product']);
 Route::get('/all-category-product', [CategoryController::class, 'all_category_product']);
+Route::post('/save-category-product', [CategoryController::class, 'save_category_product']);
 
