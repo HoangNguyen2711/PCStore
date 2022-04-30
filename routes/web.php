@@ -2,22 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 //Frontend
 use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index']);
-
 Route::get('/trang-chu', [HomeController::class, 'index']);
 
 //Backend
@@ -33,6 +21,7 @@ use App\Http\Controllers\CategoryController;
 
 Route::get('/add-category-product', [CategoryController::class, 'add_category_product']);
 Route::get('/edit-category-product/{category_product_id}', [CategoryController::class, 'edit_category_product']);
+
 Route::get('/delete-category-product/{category_product_id}', [CategoryController::class, 'delete_category_product']);
 Route::get('/all-category-product', [CategoryController::class, 'all_category_product']);
 
@@ -41,6 +30,10 @@ Route::get('/unactive-category-product/{category_product_id}', [CategoryControll
 
 Route::post('/save-category-product', [CategoryController::class, 'save_category_product']);
 Route::post('/update-category-product/{category_product_id}', [CategoryController::class, 'update_category_product']);
+
+//Danh muc san pham trang chu
+Route::get('/danh-muc-san-pham/{category_id}', [CategoryController::class, 'show_category_home']);
+
 
 
 //Brand Product
@@ -56,6 +49,9 @@ Route::get('/unactive-brand-product/{brand_product_id}', [BrandController::class
 
 Route::post('/save-brand-product', [BrandController::class, 'save_brand_product']);
 Route::post('/update-brand-product/{brand_product_id}', [BrandController::class, 'update_brand_product']);
+
+//Danh muc thuong hieu trang chu
+Route::get('/thuong-hieu-san-pham/{brand_id}', [BrandController::class, 'show_brand_home']);
 
 //Product
 use App\Http\Controllers\ProductController;
