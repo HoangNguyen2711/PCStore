@@ -73,3 +73,10 @@ Route::get('/chi-tiet-san-pham/{product_id}', [ProductController::class, 'detail
 //Cart
 use App\Http\Controllers\CartController;
 Route::post('/save-cart', [CartController::class, 'save_cart']);
+Route::post('/update-cart-quantity', [CartController::class, 'update_cart_quantity']);
+Route::get('/show-cart', [CartController::class, 'show_cart']);
+Route::get('/delete-to-cart/{rowId}', [CartController::class, 'delete_to_cart']);
+
+//Checkout
+use App\Http\Controllers\CheckoutController;
+Route::get('/login-checkout', [CheckoutController::class, 'login_checkout']);

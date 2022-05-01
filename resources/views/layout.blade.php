@@ -32,12 +32,12 @@
                     <div class="col-sm-6">
                         <div class="contactinfo">
                             <ul class="nav nav-pills">
-                                <li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-                                <li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i>+84 06295398</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i> pcstore@gmail.com </a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-sm-6">
+<!--                     <div class="col-sm-6">
                         <div class="social-icons pull-right">
                             <ul class="nav navbar-nav">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -47,7 +47,7 @@
                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div><!--/header_top-->
@@ -61,25 +61,25 @@
                         </div>
                         <div class="btn-group pull-right">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+<!--                                 <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
                                     VN
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">US</a></li>
                                     <li><a href="#">UK</a></li>
-                                </ul>
+                                </ul> -->
                             </div>
                             
                             <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+<!--                                 <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
                                     VND
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Dollar</a></li>
                                     <li><a href="#">Pound</a></li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
@@ -87,10 +87,9 @@
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
                                 <li><a href="{{URL::to('/admin')}}"><i class="fa fa-user"></i> Admin</a></li>
-                                <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
-                                <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                                <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                                <li><a href="{{URL::to('/checkout')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
+                                <li><a href="{{URL::to('/show-cart')}}"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
+                                <li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock"></i> Đăng nhập</a></li>
                             </ul>
                         </div>
                     </div>
@@ -228,7 +227,7 @@
                             <div class="brands-name">
                                 <ul class="nav nav-pills nav-stacked">
                             @foreach($brand as $key => $brand)
-                                    <li><a href="{{URL::to('/thuong-hieu-san-pham/'.$brand->brand_id)}}"> <span class="pull-right">(50)</span>{{$brand->brand_name}}</a></li>
+                                    <li><a href="{{URL::to('/thuong-hieu-san-pham/'.$brand->brand_id)}}"> <span class="pull-right"></span>{{$brand->brand_name}}</a></li>
                             @endforeach
                                 </ul>
                             </div>
