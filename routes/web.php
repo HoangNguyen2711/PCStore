@@ -36,6 +36,7 @@ Route::get('/danh-muc-san-pham/{category_id}', [CategoryController::class, 'show
 
 
 
+
 //Brand Product
 use App\Http\Controllers\BrandController;
 
@@ -66,3 +67,9 @@ Route::get('/unactive-product/{product_id}', [ProductController::class, 'unactiv
 
 Route::post('/save-product', [ProductController::class, 'save_product']);
 Route::post('/update-product/{product_id}', [ProductController::class, 'update_product']);
+
+Route::get('/chi-tiet-san-pham/{product_id}', [ProductController::class, 'details_product']);
+
+//Cart
+use App\Http\Controllers\CartController;
+Route::post('/save-cart', [CartController::class, 'save_cart']);
