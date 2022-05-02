@@ -6,7 +6,7 @@
 				<ol class="breadcrumb">
 				  <li><a href="#">Trang chủ</a></li>
 				  <li class="active">Giỏ hàng</li>
-				</ol>
+				</ol>	
 			</div>
 			<div class="table-responsive cart_info">
 				<?php
@@ -81,8 +81,22 @@
 							<li>Phí vận chuyển <span>0 VND</span></li>
 							<li>Thành tiền <span>{{Cart::total(0).' VND'}}</span></li>
 						</ul>
+						 <?php
+                                    $customer_id = Session::get('customer_id');
+                                        if($customer_id!=NULL){
+                                    
+                                ?>
+                                <a class="btn btn-default check_out" href="{{URL::to('/checkout')}}">Thanh toán</a>
+            
+                                <?php
+                                        }else{
+                                ?>
+                                 <a class="btn btn-default check_out" href="{{URL::to('/login-checkout')}}">Thanh toán</a>
+                                <?php
+                                        }
+                                ?>
 
-							<a class="btn btn-default check_out" href="{{URL::to('/login-checkout')}}">Thanh toán</a>
+
 					</div>
 				</div>
 			</div>

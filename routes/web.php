@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/trang-chu', [HomeController::class, 'index']);
+Route::post('/tim-kiem', [HomeController::class, 'search']);
 
 //Backend
 use App\Http\Controllers\AdminController;
@@ -80,3 +81,8 @@ Route::get('/delete-to-cart/{rowId}', [CartController::class, 'delete_to_cart'])
 //Checkout
 use App\Http\Controllers\CheckoutController;
 Route::get('/login-checkout', [CheckoutController::class, 'login_checkout']);
+Route::get('/logout-checkout', [CheckoutController::class, 'logout_checkout']);
+Route::post('/add-customer', [CheckoutController::class, 'add_customer']);
+Route::get('/checkout', [CheckoutController::class, 'checkout']);
+Route::post('/save-checkout-customer', [CheckoutController::class, 'save_checkout_customer']);
+Route::post('/login-customer', [CheckoutController::class, 'login_customer']);
