@@ -24,7 +24,7 @@ class CartController extends Controller
         $data['name'] = $product_info->product_name;
         $data['price'] = $product_info->product_price;
         $data['weight'] = $product_info->product_price;
-        $data['option']['image'] = $product_info->product_image;
+        $data['options']['image'] = $product_info->product_image;
 
         Cart::add($data);
         Cart::setGlobalTax(10);

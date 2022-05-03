@@ -45,13 +45,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="top-nav clearfix">
     <!--search & user info start-->
     <ul class="nav pull-right top-menu">
-        <li>
-            <input type="text" class="form-control search" placeholder=" Search">
-        </li>
+
         <!-- user login dropdown start-->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                <img alt="" src="{{('public/backend/images/2.png')}}">
+                <img alt="" src="{{('public/backend/images/2.jpg')}}">
                 <span class="username">
                     <?php
                         $name = Session::get('admin_name');
@@ -63,9 +61,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu extended logout">
-                <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
-                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                <li><a href="{{URL::to('/logout')}}"><i class="fa fa-key"></i> Log Out</a></li>
+
+                <li><a href="{{URL::to('/logout')}}"><i class="fa fa-key"></i> Đăng xuất</a></li>
             </ul>
         </li>
         <!-- user login dropdown end -->
@@ -87,7 +84,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span>Tổng quan</span>
                     </a>
                 </li>
-                
+
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>Đơn hàng</span>
+                    </a>
+                    <ul class="sub">
+						<li><a href="{{URL::to('/manage-order')}}">Quản lý đơn hàng</a></li>
+
+                    </ul>
+                </li>
+
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>

@@ -4,10 +4,13 @@
 		<div class="container">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
-
-				  <li class="active">Giỏ hàng</li>
-				</ol>	
+				  <li class="active">Thanh toán giỏ hàng</li>
+				</ol>
 			</div>
+
+		
+			<div class="review-payment">
+				<h2>Xem lại giỏ hàng</h2>
 			<div class="table-responsive cart_info">
 				<?php
 				$content = Cart::content();
@@ -64,43 +67,24 @@
 					</tbody>
 				</table>
 			</div>
+
+			<div><h4 style="magin:60px 0; font-size: 20px;padding-bottom: 20px;">Chọn hình thức thanh toán</h4>
+			</div>
+			<form method ="POST" action="{{URL::to('/order-place')}}">
+				{{ csrf_field() }}
+			<div class="payment-options">
+					<span>
+						<label><input name="payment_option" value ="1" type="checkbox"> ATM</label>
+					</span>
+					<span>
+						<label><input name="payment_option" value ="2"  type="checkbox"> COD</label>
+					</span>
+					<input type="submit" value="Đặt hàng" name="send_order_place" class="btn btn-primary btn-sm">
+
+				</div>
+			</form>
 		</div>
 	</section> <!--/#cart_items-->
-		<section id="do_action">
-		<div class="container">
-			<div class="heading">
-				<h3>Chi phí dự tính</h3>
-			</div>
-			<div class="row">
 
-				<div class="col-sm-6">
-					<div class="total_area">
-						<ul>
-							<li>Tổng giá sản phẩm <span>{{Cart::priceTotal(0).' '.'VND'}}</span></li>
-							<li>Thuế <span>{{Cart::tax(0).' '.'VND'}}</span></li>
-							<li>Phí vận chuyển <span>0 VND</span></li>
-							<li>Thành tiền <span>{{Cart::total(0).' VND'}}</span></li>
-						</ul>
-						 <?php
-                                    $customer_id = Session::get('customer_id');
-                                        if($customer_id!=NULL){
-                                    
-                                ?>
-                                <a class="btn btn-default check_out" href="{{URL::to('/checkout')}}">Thanh toán</a>
-            
-                                <?php
-                                        }else{
-                                ?>
-                                 <a class="btn btn-default check_out" href="{{URL::to('/login-checkout')}}">Thanh toán</a>
-                                <?php
-                                        }
-                                ?>
-
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</section><!--/#do_action-->
 
 @endsection
