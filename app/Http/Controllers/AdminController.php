@@ -42,6 +42,7 @@ class AdminController extends Controller
 
         $result = DB::table('tbl_admin')->where('admin_email',$admin_email)->where('admin_password',$admin_password)->first();
         if($result) {
+            session()->flash('message', 'Chào mừng bạn đến PC Store');
             Session::put('admin_name',$result->admin_name);
             Session::put('admin_id',$result->admin_id);
             return Redirect::to('/dashboard');

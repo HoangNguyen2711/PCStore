@@ -14,7 +14,7 @@
                          <?php
                         $cusname = Session::get('customer_name');
                         if($cusname){
-                        echo $cusname;
+                        echo 'Chào mừng ' . $cusname;
                         }
                     ?>
 

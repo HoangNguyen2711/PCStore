@@ -94,3 +94,4 @@ Route::get('/payment', [CheckoutController::class, 'payment']);
 //Order
 Route::get('/manage-order', [CheckoutController::class, 'manage_order']);
 Route::get('/view-order/{order_id}', [CheckoutController::class, 'view_order']);
+Route::get('/delete-order/{order_id}', [CheckoutController::class, 'delete_order']);
